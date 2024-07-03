@@ -10,10 +10,17 @@ export default {
         'custom-bottom': '0px 0px 7px 2px rgba(0,0,0,0.1)',
       },
       colors: {
+        custom:{
+          'black': '#000000',
+          'orange': '#FFAC3C',
+          'red': '#FF0000',
+          'blue': '#0000FF',
+          'green': '#00FF00',
+        },
         primary: {
           gray: '#EDEDED',
           DEFAULT: '#4299e1',
-          dark: '#3182ce',
+          blue: '#3A4980',
           black:'#1D364D'
         },
         secondary: {
@@ -25,7 +32,11 @@ export default {
           dark:'#875541',
           light:'#F5F1EE'
         }
-        // Add more colors as needed
+      },
+      screens: {
+        '3xl': '1920px',
+        '4xl': '2240px',
+        '5xl': '2560px',
       },
     },
   },

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CartIcon } from "../icons";
 import Text from "../ui/SharedComponent/Text";
-import CartModal from "../ui/Cart";
+import CartModal from "../ui/CartModal";
 
 interface HeaderProps {
   logoSrc: string;
