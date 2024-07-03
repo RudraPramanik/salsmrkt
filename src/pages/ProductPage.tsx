@@ -1,7 +1,9 @@
 import ProductSelect from "../components/ProductSelect";
 import Layout from "../components/layout/Layout";
+import YouTubeVideo from "../components/ui/YouTubeVideo";
 
 const ProductPage = () => {
+  const videoUrl = 'https://www.youtube.com/watch?v=PdJq-dAQr-Y';
   return (
     <Layout>
       <div className="mt-28  ">ProductPage</div>
@@ -11,6 +13,7 @@ const ProductPage = () => {
           {" "}
           <ProductSelect />
         </div>
+        <YouTubeVideo videoUrl={videoUrl}/>
       </div>
     </Layout>
   );
