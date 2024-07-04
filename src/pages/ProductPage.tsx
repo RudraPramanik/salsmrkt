@@ -1,4 +1,4 @@
-import ProductSelect from "../components/ProductSelect";
+import ProductSelect from "../components/product-page/ProductSelect";
 import Layout from "../components/layout/Layout";
 import YouTubeVideo from "../components/ui/YouTubeVideo";
 import Product from "./product";

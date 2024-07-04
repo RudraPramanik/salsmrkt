@@ -4,7 +4,7 @@ export type TextProps = {
   variant: 'headingXs' | 'headingSm' | 'headingMdLg' | 'headingMdS' | 'headingMd' | 'headingSemiLg' | 'headingLg' | 'headingXl' | 'heading2xl' | 'heading3xl' | 'heading4xl' | 'heading5xl' | 'heading6xl' | 'heading8xl' | 'bodyXxs' | 'bodyXs' | 'bodySm' | 'bodyMd' | 'bodyLg' | 'bodyXl'
   
   /**Defaults to `inheriting parent's color` */
-  color?: 'black' | 'white' | 'primary' | 'secondary'
+  color?: 'black' | 'white' | 'primary' | 'secondary'| 'gray'
 
   alignment?: 'start' | 'center' | 'end'
 
@@ -58,7 +58,8 @@ const colorClasses = {
   black: 'text-black-1',
   white: 'text-white',
   primary: 'text-primary',
-  secondary: 'text-secondary'
+  secondary: 'text-secondary',
+  gray: 'text-gray-400', 
 }
 
 const alignmentClasses = {

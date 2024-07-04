@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SelectButton from "./ui/SharedComponent/SelectButton";
-import CustomRadioButton from "./ui/SharedComponent/RadioButton";
+import SelectButton from "../ui/SharedComponent/SelectButton";
+import CustomRadioButton from "../ui/SharedComponent/RadioButton";
 
 const ProductSelect = () => {
     const [selectedValue, setSelectedValue] = useState<string>("");

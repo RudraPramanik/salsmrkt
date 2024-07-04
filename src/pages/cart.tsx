@@ -1,9 +1,5 @@
-// Cart.tsx
 import React from 'react';
-// import { useAppDispatch, useAppSelector } from './hooks';
-// import { removeItem, updateItemCount, clearCart } from './slice/cartSlice';
 import { useAppDispatch, useAppSelector } from '../utils/hooks';
-// import { removeItem, updateItemCount, clearCart } from '../redux/slice/cartSlice';
 import { removeItem, updateItemCount, clearCart } from '../redux/slices/CartSlice';
 
 const Cart: React.FC = () => {

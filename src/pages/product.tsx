@@ -3,11 +3,12 @@ import { useAppDispatch, useAppSelector } from "../utils/hooks";
 import { setColor, setSize } from "../redux/slices/ProductSlice";
 import { addItem } from "../redux/slices/CartSlice";
 import productData from "../utils/constant";
-import Gallery from "../components/ProductGallary";
+import Gallery from "../components/product-page/ProductGallary";
 import CustomRadioButton from "../components/ui/SharedComponent/RadioButton";
 import ColorSelectButton from "../components/ui/SharedComponent/Button";
 import QuantitySelector from "../components/ui/QuantitySelect";
 import ColoredButton from "../components/ui/SharedComponent/CButton";
+import ProductDescription from "../components/ui/ProductDescription";
 
 const Product: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -87,6 +88,9 @@ const Product: React.FC = () => {
         {/* gallary */}
         {/* product */}
         <div className=" col-span-1 ">
+            <div>
+                <ProductDescription/>
+            </div>
           <div>
             {product.colors.map((color) => (
               <ColorSelectButton
