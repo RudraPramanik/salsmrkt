@@ -1,11 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ProductState } from "../../types/types";
 
 
-export interface ProductState {
-    selectedColor: string;
-    selectedSize: string;
-    mainImage: string;
-  }
+
   const initialState: ProductState = {
     selectedColor: 'Red',
     selectedSize: 'S',
@@ -14,9 +11,16 @@ export interface ProductState {
 const productSlice = createSlice({
     name: 'product',
     initialState,
-    reducers:{
-
-    }
+    reducers: {
+        setColor: (state:ProductState, action: PayloadAction<{ color: string; mainImage: string }>) => {
+          state.selectedColor = action.payload.color;
+          state.mainImage = action.payload.mainImage;
+          state.selectedSize = 'S';
+        },
+        setSize: (state:ProductState, action: PayloadAction<string>) => {
+          state.selectedSize = action.payload;
+        }
+      }
 
 })
 export const { } = productSlice.actions;
