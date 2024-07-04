@@ -23,5 +23,5 @@ const productSlice = createSlice({
       }
 
 })
-export const { } = productSlice.actions;
+export const {  setColor, setSize } = productSlice.actions;
 export default productSlice.reducer;

@@ -54,6 +54,6 @@ import { CartItem, CartState, RemoveItemPayload, UpdateItemCountPayload } from '
 
   })
 
-  export const {  } = cartSlice.actions;
+  export const { addItem, removeItem, updateItemCount, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
   
