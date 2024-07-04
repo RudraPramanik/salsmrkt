@@ -5,10 +5,12 @@ import { addItem } from "../redux/slices/CartSlice";
 import productData from "../utils/constant";
 import Gallery from "../components/product-page/ProductGallary";
 import CustomRadioButton from "../components/ui/SharedComponent/RadioButton";
-import ColorSelectButton from "../components/ui/SharedComponent/Button";
+import ColorSelectButton from "../components/ui/SharedComponent/ColorSelectButton";
 import QuantitySelector from "../components/ui/QuantitySelect";
 import ColoredButton from "../components/ui/SharedComponent/CButton";
 import ProductDescription from "../components/ui/ProductDescription";
+import Text from "../components/ui/SharedComponent/Text";
+import ProductOutline from "../components/product-page/ProductOutline";
 
 const Product: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -91,9 +93,10 @@ const Product: React.FC = () => {
             <div>
                 <ProductDescription/>
             </div>
-          <div>
+          <div className="flex space-x-4 " >
             {product.colors.map((color) => (
               <ColorSelectButton
+              borderColor={color.name}
                 key={color.name}
                 color={color.name}
                 checked={selectedColor === color.name}
@@ -101,7 +104,13 @@ const Product: React.FC = () => {
               />
             ))}
           </div>
+
+
+
           <div>
+          <Text variant='bodyXs' className=" text-chocolate-text " >{selectedSize}</Text>
+
+          <div className="flex space-x-4" >
             {product.colors
               .find((color) => color.name === selectedColor)
               ?.sizes.map((size) => (
@@ -113,11 +122,22 @@ const Product: React.FC = () => {
                 />
               ))}
           </div>
+          </div>
+{/*  */}
+
+          <div className="flex " >
           <QuantitySelector
             quantity={quantity}
             onIncrease={handleIncreaseQuantity}
             onDecrease={handleDecreaseQuantity}
           />
+           <ColoredButton onClick={handleAddToCart} color={selectedColor}>
+            Add to Cart
+          </ColoredButton>{" "}
+
+          </div>
+          {/*  */}
+         
           <div>
             <p>Selected Size: {selectedSize}</p>
             <p>
@@ -128,9 +148,7 @@ const Product: React.FC = () => {
                 ?.price.toFixed(2)}
             </p>
           </div>
-          <ColoredButton onClick={handleAddToCart} color={selectedColor}>
-            Add to Cart
-          </ColoredButton>{" "}
+         
         </div>
         {/* product */}
       </div>
@@ -157,7 +175,7 @@ const Product: React.FC = () => {
         onDecrease={handleDecreaseQuantity}
       /> */}
       {/* Display selected size and price */}
-      <div>
+      {/* <div>
         <p>Selected Size: {selectedSize}</p>
         <p>
           Price: $
@@ -166,11 +184,9 @@ const Product: React.FC = () => {
             ?.sizes.find((size) => size.size === selectedSize)
             ?.price.toFixed(2)}
         </p>
-      </div>
+      </div> */}
       {/* Add to Cart Button */}
-      <ColoredButton onClick={handleAddToCart} color={selectedColor}>
-        Add to Cart
-      </ColoredButton>{" "}
+      <ProductOutline/>
     </div>
   );
 };

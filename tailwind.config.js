@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -7,6 +8,14 @@ export default {
         "custom-bottom": "0px 0px 7px 2px rgba(0,0,0,0.1)",
       },
       colors: {
+        polo: {
+          white: "#EDEDED",
+          black: "#000000",
+          orange: "#FFAC3C",
+          red: "#FF0000",
+          blue: "#0000FF",
+          green: "#00FF00",
+        },
         custom: {
           black: "#000000",
           orange: "#FFAC3C",
@@ -28,6 +37,15 @@ export default {
         chocolate: {
           dark: "#875541",
           light: "#F5F1EE",
+          text:"#726C6C"
+        },
+        chilli: {
+          dark: "#D46F77",
+          light: "#FFF0F0"
+        },
+        blue: {
+          dark: "#3A4980",
+          light: "#EDF0F8"
         },
       },
       screens: {
@@ -50,7 +68,7 @@ export default {
         ".scrollbar-hide::-webkit-scrollbar": {
           display: "none",
         },
-        // gradient border for gallary
+        // gradient border for gallery
         '.gradient-border': {
           position: 'relative',
           padding: '2px', 
@@ -78,8 +96,8 @@ export default {
             borderRadius: '2rem', // 3XL screens
           },
         },
-        
       });
     },
   ],
 };
+

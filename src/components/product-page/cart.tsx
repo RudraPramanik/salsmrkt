@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../utils/hooks';
-import { removeItem, updateItemCount, clearCart } from '../redux/slices/CartSlice';
+import { useAppDispatch, useAppSelector } from '../../utils/hooks';
+import { removeItem, updateItemCount, clearCart } from '../../redux/slices/CartSlice';
 
 const Cart: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -47,7 +47,7 @@ const Cart: React.FC = () => {
             ))}
           </ul>
           <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
-          <button onClick={handleClearCart}>Clear Cart</button>
+          <button onClick={handleClearCart}>chackout cart</button>
         </div>
       )}
     </div>

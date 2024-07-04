@@ -10,31 +10,53 @@ const productData = {
     name: "Fashion T-Shirt",
     description: "High-quality cotton t-shirt available in multiple colors and sizes.",
     colors: [
+        {
+            name: "Black",
+            sizes: [
+                { size: "Small", price: 10 },
+              { size: "Medium", price: 12 },
+              { size: "Large", price: 14 },
+              { size: "Extra Large", price: 16 },
+              { size: "XXL", price: 18 }
+            ],
+            image: black
+          },
+          {
+            name: "#f2f0f0",
+            sizes: [
+                { size: "Small", price: 10 },
+              { size: "Medium", price: 12 },
+              { size: "Large", price: 14 },
+              { size: "Extra Large", price: 16 },
+              { size: "XXL", price: 18 }
+            ],
+            image: white
+          },
+      {
+        name: "#BB0043",
+        sizes: [ 
+          { size: "Small", price: 10 },
+          { size: "Medium", price: 12 },
+          { size: "Large", price: 14 },
+          { size: "Extra Large", price: 16 },
+          { size: "XXL", price: 18 }
+        ],
+        image: red
+      },
+      {
+        name: "#0078B5",
+        sizes: [
+            { size: "Small", price: 10 },
+            { size: "Medium", price: 12 },
+            { size: "Large", price: 14 },
+            { size: "Extra Large", price: 16 },
+            { size: "XXL", price: 18 }
+        ],
+        image: blue
+      },
       
       {
-        name: "Black",
-        sizes: [
-            { size: "Small", price: 10 },
-          { size: "Medium", price: 12 },
-          { size: "Large", price: 14 },
-          { size: "Extra Large", price: 16 },
-          { size: "XXL", price: 18 }
-        ],
-        image: black
-      },
-      {
-        name: "White",
-        sizes: [
-            { size: "Small", price: 10 },
-          { size: "Medium", price: 12 },
-          { size: "Large", price: 14 },
-          { size: "Extra Large", price: 16 },
-          { size: "XXL", price: 18 }
-        ],
-        image: white
-      },
-      {
-        name: "Green",
+        name: "#5D21B7",
         sizes: [
             { size: "Small", price: 10 },
             { size: "Medium", price: 12 },
@@ -45,7 +67,7 @@ const productData = {
         image: purple
       },
       {
-        name: "Yellow",
+        name: "#FFAC3C",
         sizes: [
             { size: "Small", price: 10 },
             { size: "Medium", price: 12 },
@@ -54,29 +76,7 @@ const productData = {
             { size: "XXL", price: 18 }
         ],
         image: yellow
-      },
-      {
-        name: "Red",
-        sizes: [
-          { size: "Small", price: 10 },
-          { size: "Medium", price: 12 },
-          { size: "Large", price: 14 },
-          { size: "Extra Large", price: 16 },
-          { size: "XXL", price: 18 }
-        ],
-        image: red
-      },
-      {
-        name: "Blue",
-        sizes: [
-            { size: "Small", price: 10 },
-            { size: "Medium", price: 12 },
-            { size: "Large", price: 14 },
-            { size: "Extra Large", price: 16 },
-            { size: "XXL", price: 18 }
-        ],
-        image: blue
-      },
+      }
     ]
   };
   
