@@ -1,13 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ProductState } from "../../types/types";
 
+import productData from "../../utils/constant";
 
+const initialColor = productData.colors[0];
+const initialSize = initialColor.sizes[0];
 
-  const initialState: ProductState = {
-    selectedColor: 'Red',
-    selectedSize: 'S',
-    mainImage: 'https://via.placeholder.com/300/FF0000/FFFFFF?text=Red'
-  };
+const initialState: ProductState = {
+  selectedColor: initialColor.name,
+  selectedSize: initialSize.size,
+  mainImage: initialColor.image,
+};
 const productSlice = createSlice({
     name: 'product',
     initialState,

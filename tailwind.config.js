@@ -40,5 +40,19 @@ export default {
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* For Firefox */
+          '-ms-overflow-style': 'none',
+          /* For Internet Explorer and Edge */
+          'scrollbar-width': 'none',
+          /* For Google Chrome, Safari, and Opera */
+        },
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none',
+        },
+      });
+    },
+  ],}

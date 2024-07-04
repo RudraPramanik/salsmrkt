@@ -11,7 +11,7 @@ function App() {
     <>
     <ProductPage/>
     <div className=' text-red-800 ' >hello</div>
-    <Product/>
+    {/* <Product/> */}
     
 
     </>
