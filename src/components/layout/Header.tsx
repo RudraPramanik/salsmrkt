@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CartIcon } from "../icons";
 import Text from "../ui/SharedComponent/Text";
 import CartModal from "../ui/CartModal";
+import Cart from "../../pages/cart";
 
 interface HeaderProps {
   logoSrc: string;
@@ -49,10 +50,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
         <div className="h-[.5px] bg-primary-gray shadow-custom-bottom mt-2"></div>
       </div>
       <CartModal isVisible={isCartVisible} onClose={handleCloseModal}>
-        <div>
-          <h2 className="text-xl font-bold">Your Cart</h2>
-          <p>Your cart is currently empty.</p>
-        </div>
+      <Cart/>
       </CartModal>
     </header>
   );

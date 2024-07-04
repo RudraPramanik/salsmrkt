@@ -12,12 +12,12 @@ const ProductSelect = () => {
 
     </div>
     <div className="flex flex-row space-x-4   ">
-      <SelectButton color="custom-black" />
+      {/* <SelectButton color="custom-black" />
       <SelectButton color="custom-orange" />
       <SelectButton color="custom-black" />
       <SelectButton color="custom-red" />
       <SelectButton color="custom-blue" />
-      <SelectButton color="custom-green" />
+      <SelectButton color="custom-green" /> */}
     </div>
     <div className="flex space-x-4">
     <CustomRadioButton
