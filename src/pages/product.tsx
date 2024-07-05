@@ -77,7 +77,7 @@ const Product: React.FC = () => {
 
   return (
     <div>
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 ">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-16 ">
         {/* gallary */}
         <div className=" col-span-1 ">
           <Gallery

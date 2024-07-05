@@ -22,7 +22,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ tabs, onTabChange }) => {
           onClick={() => handleTabClick(tab)}
           className={clsx(
             'px-4 py-2',
-            activeTab === tab ? 'border-b-2 border-black' : 'border-transparent'
+            activeTab === tab ? 'border-b-2 border-blue-dark' : 'border-transparent'
           )}
         >
           {tab}

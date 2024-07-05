@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TabNavigation from './TabNavigation';
+import YouTubeVideo from '../ui/YouTubeVideo';
 
 const ProductOutline: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Description');
@@ -9,9 +10,7 @@ const ProductOutline: React.FC = () => {
       case 'Description':
         return <p>This is the description of the product.</p>;
       case 'Showcase':
-        return <p>This is the showcase of the product.</p>;
-      case 'Reviews':
-        return <p>This is the reviews of the product.</p>;
+        return <div><YouTubeVideo videoUrl='https://www.youtube.com/watch?v=PdJq-dAQr-Y'/></div>
       default:
         return null;
     }
@@ -19,7 +18,7 @@ const ProductOutline: React.FC = () => {
 
   return (
     <div>
-      <TabNavigation tabs={['Description', 'Showcase', 'Reviews']} onTabChange={setActiveTab} />
+      <TabNavigation tabs={['Description', 'Showcase']} onTabChange={setActiveTab} />
       <div className="mt-4">{renderContent()}</div>
     </div>
   );
