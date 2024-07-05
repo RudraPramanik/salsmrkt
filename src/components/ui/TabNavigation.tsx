@@ -21,8 +21,8 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ tabs, onTabChange }) => {
           key={tab}
           onClick={() => handleTabClick(tab)}
           className={clsx(
-            'px-4 py-2',
-            activeTab === tab ? 'border-b-2 border-blue-dark' : 'border-transparent'
+            'px-4 py-4',
+            activeTab === tab ? ' font-semibold text-blue-dark border-b-2  border-blue-dark' : ' text-chocolate-text border-transparent'
           )}
         >
           {tab}

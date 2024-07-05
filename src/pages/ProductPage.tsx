@@ -1,6 +1,6 @@
 import ProductSelect from "../components/product-page/ProductSelect";
 import Layout from "../components/layout/Layout";
-import YouTubeVideo from "../components/ui/YouTubeVideo";
+import YouTubeVideo from "../components/product-page/YouTubeVideo";
 import Product from "./product";
 
 const ProductPage = () => {

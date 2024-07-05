@@ -4,7 +4,7 @@ export type TextProps = {
   variant: 'headingXs' | 'headingSm' | 'headingMdLg' | 'headingMdS' | 'headingMd' | 'headingSemiLg' | 'headingLg' | 'headingXl' | 'heading2xl' | 'heading3xl' | 'heading4xl' | 'heading5xl' | 'heading6xl' | 'heading8xl' | 'bodyXxs' | 'bodyXs' | 'bodySm' | 'bodyMd' | 'bodyLg' | 'bodyXl'
   
   /**Defaults to `inheriting parent's color` */
-  color?: 'black' | 'white' | 'primary' | 'secondary'| 'gray'
+  color?: 'black' | 'white' | 'primary' | 'secondary'| 'gray' | 'blue'
 
   alignment?: 'start' | 'center' | 'end'
 
@@ -55,11 +55,12 @@ const fontWeightClasses: Record<string, string> = {
 };
 
 const colorClasses = {
-  black: 'text-black-1',
+  black: 'text-custom-black',
   white: 'text-white',
   primary: 'text-primary',
   secondary: 'text-secondary',
-  gray: 'text-gray-400', 
+  gray: 'text-custom-gray', 
+  blue:'text-blue-dark'
 }
 
 const alignmentClasses = {

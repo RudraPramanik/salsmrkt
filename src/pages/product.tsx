@@ -93,7 +93,20 @@ const Product: React.FC = () => {
             <div>
                 <ProductDescription/>
             </div>
-          <div className="flex space-x-4 " >
+            {/* price */}
+            <div className=" flex space-x-8 items-center py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray " >
+              <Text variant="heading2xl" fontWeight="semibold" color="black" >{`$`}
+              {product.colors
+                .find((color) => color.name === selectedColor)
+                ?.sizes.find((size) => size.size === selectedSize)
+                ?.price.toFixed(2)}
+              </Text>
+              <Text variant="bodyMd" className=" line-through " color="gray" >$71.56</Text>
+
+            </div>
+            {/* prices */}
+            {/* color */}
+          <div className="flex space-x-4 py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray   " >
             {product.colors.map((color) => (
               <ColorSelectButton
               borderColor={color.name}
@@ -104,10 +117,12 @@ const Product: React.FC = () => {
               />
             ))}
           </div>
+          {/* color */}
 
 
 
-          <div>
+        {/* size */}
+          <div className="py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray " >
           <Text variant='bodyXs' className=" text-chocolate-text " >{selectedSize}</Text>
 
           <div className="flex space-x-4" >
@@ -123,7 +138,7 @@ const Product: React.FC = () => {
               ))}
           </div>
           </div>
-{/*  */}
+{/* size */}
 
           <div className="flex " >
           <QuantitySelector

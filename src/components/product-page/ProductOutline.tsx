@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import TabNavigation from './TabNavigation';
-import YouTubeVideo from '../ui/YouTubeVideo';
+import TabNavigation from '../ui/TabNavigation';
+import YouTubeVideo from './YouTubeVideo';
+import ProductDetails from './ProductDetails';
 
 const ProductOutline: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Description');
@@ -8,7 +9,7 @@ const ProductOutline: React.FC = () => {
   const renderContent = () => {
     switch (activeTab) {
       case 'Description':
-        return <p>This is the description of the product.</p>;
+        return <div><ProductDetails/></div>;
       case 'Showcase':
         return <div><YouTubeVideo videoUrl='https://www.youtube.com/watch?v=PdJq-dAQr-Y'/></div>
       default:

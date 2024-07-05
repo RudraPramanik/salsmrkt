@@ -20,11 +20,14 @@ export default {
           green: "#00FF00",
         },
         custom: {
-          black: "#000000",
+          black: "#344054",
+          gray:"#667085",
           orange: "#FFAC3C",
           red: "#FF0000",
           blue: "#0000FF",
           green: "#00FF00",
+          chiliDark: "#D46F77",
+          chiliLight: "#FFF0F0",
         },
         primary: {
           gray: "#EDEDED",
@@ -40,12 +43,12 @@ export default {
         chocolate: {
           dark: "#875541",
           light: "#F5F1EE",
-          text:"#726C6C"
+          text:"#726C6C",
         },
-        chilli: {
-          dark: "#D46F77",
-          light: "#FFF0F0"
-        },
+        // chilli: {
+        //   chiliDark: "#D46F77",
+        //   chiliLight: "#FFF0F0",
+        // },
         blue: {
           dark: "#3A4980",
           light: "#EDF0F8"

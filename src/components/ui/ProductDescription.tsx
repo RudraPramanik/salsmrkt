@@ -4,7 +4,7 @@ import { BookmarkIcon, LoveIcon, ShareIcon } from "../icons";
 
 const ProductDescription = () => {
   return (
-    <div className="flex justify-between ">
+    <div className="flex justify-between mx-4 border-b border-primary-gray pb-8 ">
       <div>
         <Text variant="heading2xl" color="black" fontWeight="bold">
           Polo Shirt
@@ -18,8 +18,14 @@ const ProductDescription = () => {
         <Tooltip
         icon={<LoveIcon stroke="#D46F77" />} 
         text="109" 
-        bgColor="chilli-light" 
-        textColor="chilli-dark" 
+        bgColor="custom-chiliLight" 
+        textColor="custom-chiliDark" 
+      />
+          <Tooltip
+        icon={<LoveIcon stroke="#D46F77" />} 
+        text="109" 
+        bgColor="blue-light" 
+        textColor="blue-dark" 
       />
   
           <Tooltip
