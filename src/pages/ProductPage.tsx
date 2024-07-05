@@ -115,7 +115,7 @@ const ProductPage: React.FC = () => {
             <Text variant="bodyXs" className="my-4" color="gray">
               choose a color:
             </Text>
-            <div className="flex space-x-4 lg:space-x-6 xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14 " >
+            <div className="flex space-x-4 lg:space-x-6 xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14 ">
               {product.colors.map((color) => (
                 <ColorSelectButton
                   key={color.name}
