@@ -11,10 +11,10 @@ import ColoredButton from "../components/ui/SharedComponent/CButton";
 import ProductDescription from "../components/ui/ProductDescription";
 import Text from "../components/ui/SharedComponent/Text";
 import ProductOutline from "../components/product-page/ProductOutline";
-import { CartIcon } from "../components/icons";
+import { CartIcon, VanIcon } from "../components/icons";
 import DeliveryQuote from "../components/ui/SharedComponent/DeliveryQuoto";
 
-const Product: React.FC = () => {
+const ProductPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const selectedColor = useAppSelector((state) => state.product.selectedColor);
   const selectedSize = useAppSelector((state) => state.product.selectedSize);
@@ -71,7 +71,7 @@ const Product: React.FC = () => {
           size: selectedSize,
           count: quantity,
           unitPrice: selectedSizeObject.price,
-         image: selectedColorObject.image,
+          image: selectedColorObject.image,
         })
       );
       setQuantity(1);
@@ -93,81 +93,96 @@ const Product: React.FC = () => {
         {/* gallary */}
         {/* product */}
         <div className=" col-span-1 ">
-            <div>
-                <ProductDescription/>
-            </div>
-            {/* price */}
-            <div className=" flex space-x-8 items-center py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray " >
-              <Text variant="heading2xl" fontWeight="semibold" color="black" >{`$`}
+          <div>
+            <ProductDescription />
+          </div>
+          {/* price */}
+          <div className=" flex space-x-8 items-center py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray ">
+            <Text variant="heading2xl" fontWeight="semibold" color="black">
+              {`$`}
               {product.colors
                 .find((color) => color.name === selectedColor)
                 ?.sizes.find((size) => size.size === selectedSize)
                 ?.price.toFixed(2)}
-              </Text>
-              <Text variant="bodyMd" className=" line-through " color="gray" >$71.56</Text>
-
+            </Text>
+            <Text variant="bodyMd" className=" line-through " color="gray">
+              $71.56
+            </Text>
+          </div>
+          {/* prices */}
+          {/* color */}
+          <div className="border-b border-primary-gray pb-6 md:pb-8 xl:pb-12 2xl:pb-16 3xl:pb-16 4xl:pb-20  ">
+            <Text variant="bodyXs" className="my-4" color="gray">
+              choose a color:
+            </Text>
+            <div className="flex space-x-4 lg:space-x-6 xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14 " >
+              {product.colors.map((color) => (
+                <ColorSelectButton
+                  key={color.name}
+                  color={color.name}
+                  checked={selectedColor === color.name}
+                  onClick={() => handleColorChange(color.name, color.image)}
+                />
+              ))}
             </div>
-            {/* prices */}
-            {/* color */}
-          <div className="flex space-x-4 py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray   " >
-            {product.colors.map((color) => (
-              <ColorSelectButton
-                key={color.name}
-                color={color.name}
-                checked={selectedColor === color.name}
-                onClick={() => handleColorChange(color.name, color.image)}
-              />
-            ))}
           </div>
           {/* color */}
 
+          {/* size */}
+          <div className="py-4 md:py-8 2xl:py-10 3xl:py-12 border-b space-y-4 border-primary-gray ">
+            <Text variant="bodyXs" color="gray">
+              choose a size:
+            </Text>
 
-
-        {/* size */}
-          <div className="py-4 md:py-8 2xl:py-10 3xl:py-12 border-b space-y-4 border-primary-gray " >
-          <Text variant='bodyXs' color="chocolate" >choose a size:</Text>
-
-          <div className="flex space-x-4" >
-            {product.colors
-              .find((color) => color.name === selectedColor)
-              ?.sizes.map((size) => (
-                <CustomRadioButton
-                  key={size.size}
-                  checked={selectedSize === size.size}
-                  onChange={() => handleSizeChange(size.size)}
-                  label={size.size}
-                />
-              ))}
+            <div className=" grid grid-cols-3 sm:flex sm:space-x-4 ">
+              {product.colors
+                .find((color) => color.name === selectedColor)
+                ?.sizes.map((size) => (
+                  <CustomRadioButton
+                    key={size.size}
+                    checked={selectedSize === size.size}
+                    onChange={() => handleSizeChange(size.size)}
+                    label={size.size}
+                  />
+                ))}
+            </div>
           </div>
-          </div>
-{/* size */}
+          {/* size */}
 
-          <div className="flex py-4 md:py-8 2xl:py-10 3xl:py-12  " >
-          <QuantitySelector
-            quantity={quantity}
-            onIncrease={handleIncreaseQuantity}
-            onDecrease={handleDecreaseQuantity}
-          />
-           <ColoredButton onClick={handleAddToCart} color={selectedColor}>
-            <CartIcon stroke="white" className="w-4 h-4" />
-            <Text variant="bodySm" color="white" >  Add to Cart</Text>
-          
-          </ColoredButton>{" "}
-
+          <div className="flex py-4 md:py-8 2xl:py-10 3xl:py-12 space-x-3 sm:space-x-6  ">
+            <QuantitySelector
+              quantity={quantity}
+              onIncrease={handleIncreaseQuantity}
+              onDecrease={handleDecreaseQuantity}
+            />
+            <ColoredButton onClick={handleAddToCart} color={selectedColor}>
+              <CartIcon stroke="white" className="w-4 h-4" />
+              <Text variant="bodySm" color="white">
+                {" "}
+                Add to Cart
+              </Text>
+            </ColoredButton>
           </div>
           {/*  */}
-          <div className=" border rounded-2xl p-2 " >
-          <DeliveryQuote description="Enter your Postal code for Delivery Availability" icon={<CartIcon string="#D75951" className="w-6 h-6" />} heading="Free Delivery"  />
-          <div className={`border-b mx-2 my-2 `}></div>
-          <DeliveryQuote description="Enter your Postal code for Delivery Availability" icon={<CartIcon string="#D75951" className="w-6 h-6" />} heading="Free Delivery"  />
-
+          <div className=" border rounded-2xl p-2 ">
+            <DeliveryQuote
+              description="Enter your Postal code for Delivery Availability"
+              icon={<VanIcon className="w-6 h-6" />}
+              heading="Free Delivery"
+            />
+            <div className={`border-b mx-2 my-2 `}></div>
+            <DeliveryQuote
+              description="Enter your Postal code for Delivery Availability"
+              icon={<CartIcon string="#D75951" className="w-6 h-6" />}
+              heading="Free Delivery"
+            />
           </div>
           {/*  */}
         </div>
       </div>
-      <ProductOutline/>
+      <ProductOutline />
     </div>
   );
 };
 
-export default Product;
+export default ProductPage;

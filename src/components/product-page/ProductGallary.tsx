@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { ChevronLeftIcon, ChevronRightIcon } from '../icons/Chevron';
 
 interface GalleryProps {
   mainImage: string;
@@ -32,7 +33,7 @@ const Gallery: React.FC<GalleryProps> = ({ mainImage, colors, selectedColor, onT
       {/* Thumbnails Slider */}
       <div className="relative flex items-center">
         <button onClick={scrollLeft} className="absolute left-0 z-10 p-2 ">
-          &lt;
+          <ChevronLeftIcon className='w-4 h-4 2xl:w-6 2xl:h-6 ' />
         </button>
         <div
           ref={sliderRef}
@@ -51,7 +52,7 @@ const Gallery: React.FC<GalleryProps> = ({ mainImage, colors, selectedColor, onT
           ))}
         </div>
         <button onClick={scrollRight} className="absolute right-0 z-10 p-2">
-          &gt;
+          <ChevronRightIcon className='w-4 h-4 2xl:w-6 2xl:h-6 ' />
         </button>
       </div>
     </div>

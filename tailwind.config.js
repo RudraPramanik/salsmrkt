@@ -26,8 +26,8 @@ export default {
           red: "#FF0000",
           blue: "#0000FF",
           green: "#00FF00",
-          chiliDark: "#D46F77",
-          chiliLight: "#FFF0F0",
+          // chiliDark: "#D46F77",
+          // chiliLight: "#FFF0F0",
         },
         primary: {
           gray: "#EDEDED",
@@ -45,11 +45,13 @@ export default {
           dark: "#875541",
           light: "#F5F1EE",
           text:"#726C6C",
+          // chili: "#d46f77",
+          // babyPink: "#fff0f0",
         },
-        // chilli: {
-        //   chiliDark: "#D46F77",
-        //   chiliLight: "#FFF0F0",
-        // },
+        chili: {
+          dark: "#D46F77",
+          light: "#FFF0F0",
+        },
         blue: {
           dark: "#3A4980",
           light: "#EDF0F8"

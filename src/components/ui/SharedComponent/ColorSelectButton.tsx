@@ -16,7 +16,7 @@ const ColorSelectButton: React.FC<ColorSelectButtonProps> = ({ color, checked, o
       className={clsx(
         "relative flex items-center justify-center rounded-full mt-1 border-2",
         "focus:outline-none",
-        cart ? "w-5 h-5" : "w-8 h-8 sm:w-[48px] sm:h-[48px] xl:w-[60px] xl:h-[60px] 3xl:w-[70px] 3xl:h-[70px]",
+        cart ? "w-4 h-4" : "w-10 h-10 sm:w-[48px] sm:h-[48px] xl:w-[60px] xl:h-[60px] 3xl:w-[70px] 3xl:h-[70px]",
         `bg-${color}`
       )}
       style={{
@@ -30,7 +30,7 @@ const ColorSelectButton: React.FC<ColorSelectButtonProps> = ({ color, checked, o
             className="absolute inset-0 rounded-full border-2"
             style={{ borderColor: 'white' }}
           ></span>
-          <TickIcon className="w-4 h-4 z-10" />
+          <TickIcon className=" w-2 h-2 sm:w-4 sm:h-4 z-10" />
         </>
       )}
     </button>

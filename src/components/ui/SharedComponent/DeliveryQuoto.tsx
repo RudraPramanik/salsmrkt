@@ -11,13 +11,13 @@ interface DeliveryQuotoProps {
 
 const DeliveryQuote: React.FC<DeliveryQuotoProps> = ({ icon, heading, description}) => {
   return (
-    <div className="flex items-center space-x-4  p-2">
-      <div className={clsx('flex-shrink-0')}>
+    <div className="flex space-x-4  p-2">
+      <div className={clsx('flex-shrink-0 mt-1 ')}>
         {icon}
       </div>
       <div>
         <h2 className="text-xl font-bold text-custom-black">{heading}</h2>
-        <Text variant='bodySm' className='underline' color='chocolate' >{description}</Text>
+        <Text variant='bodyXs' className='underline' color='chocolate' >{description}</Text>
       </div>
     </div>
   );

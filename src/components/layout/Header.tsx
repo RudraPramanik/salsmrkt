@@ -43,9 +43,9 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
   };
 
   return (
-    <header className="relative pb-1 bg-white">
+    <header className="relative pb-1 bg-white mx-6 2xl:mx-8 3xl:mx-10 4xl:mx-14 ">
       <div className="border-b border-gray-300">
-        <div className="flex justify-between items-center py-4 px-6">
+        <div className="flex justify-between items-center py-4">
           <img src={logoSrc} alt="Logo" className="h-10" />
           <CartButton order={cartItems.length} onClick={handleCartButtonClick} />
         </div>
