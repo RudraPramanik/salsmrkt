@@ -12,6 +12,7 @@ export interface ProductState {
     count: number;
     unitPrice: number;
     totalPrice: number;
+    image: string;
   }
 
   export interface CartState {

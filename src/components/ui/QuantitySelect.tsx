@@ -8,23 +8,20 @@ interface QuantitySelectorProps {
 
 const QuantitySelector: React.FC<QuantitySelectorProps> = ({ quantity, onIncrease, onDecrease }) => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center bg-primary-gray border rounded-3xl ">
       <button
         onClick={onDecrease}
-        className="px-2 py-1 border border-gray-300 rounded-l"
+        className="px-4 py-2 text-xl font-bold text-custom-gray rounded-l-lg"
         disabled={quantity <= 1}
       >
         -
       </button>
-      <input
-        type="text"
-        value={quantity}
-        readOnly
-        className="w-12 text-center border-t border-b border-gray-300"
-      />
+      <div className="w-12 text-center text-xl font-bold">
+        {quantity}
+      </div>
       <button
         onClick={onIncrease}
-        className="px-2 py-1 border border-gray-300 rounded-r"
+        className="px-4 py-2 text-2xl font-bold text-blue-dark rounded-r-lg"
         disabled={quantity >= 15}
       >
         +

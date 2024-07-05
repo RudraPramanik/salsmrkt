@@ -3,16 +3,16 @@ import clsx from 'clsx';
 
 interface ColoredButtonProps {
   onClick: () => void;
-  color: string;
+  color?: string;
   children: React.ReactNode;
 }
 
-const ColoredButton: React.FC<ColoredButtonProps> = ({ onClick, color, children }) => {
+const ColoredButton: React.FC<ColoredButtonProps> = ({ onClick, color="#3A4980", children }) => {
   return (
     <button
       onClick={onClick}
       className={clsx(
-        "px-4 py-2 text-white rounded",
+        "px-12 py-2 text-white rounded-3xl flex justify-center items-center space-x-4 ",
         `bg-${color}`
       )}
       style={{ backgroundColor: color }}

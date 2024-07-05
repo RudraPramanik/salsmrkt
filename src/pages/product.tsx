@@ -11,6 +11,8 @@ import ColoredButton from "../components/ui/SharedComponent/CButton";
 import ProductDescription from "../components/ui/ProductDescription";
 import Text from "../components/ui/SharedComponent/Text";
 import ProductOutline from "../components/product-page/ProductOutline";
+import { CartIcon } from "../components/icons";
+import DeliveryQuote from "../components/ui/SharedComponent/DeliveryQuoto";
 
 const Product: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -69,6 +71,7 @@ const Product: React.FC = () => {
           size: selectedSize,
           count: quantity,
           unitPrice: selectedSizeObject.price,
+         image: selectedColorObject.image,
         })
       );
       setQuantity(1);
@@ -140,15 +143,24 @@ const Product: React.FC = () => {
           </div>
 {/* size */}
 
-          <div className="flex " >
+          <div className="flex py-4 md:py-8 2xl:py-10 3xl:py-12  " >
           <QuantitySelector
             quantity={quantity}
             onIncrease={handleIncreaseQuantity}
             onDecrease={handleDecreaseQuantity}
           />
            <ColoredButton onClick={handleAddToCart} color={selectedColor}>
-            Add to Cart
+            <CartIcon stroke="white" className="w-4 h-4" />
+            <Text variant="bodySm" color="white" >  Add to Cart</Text>
+          
           </ColoredButton>{" "}
+
+          </div>
+          {/*  */}
+          <div className=" border rounded-2xl p-2 " >
+          <DeliveryQuote description="Enter your Postal code for Delivery Availability" icon={<CartIcon string="#D75951" className="w-6 h-6" />} heading="Free Delivery"  />
+          <div className={`border-b mx-2 my-2 `}></div>
+          <DeliveryQuote description="Enter your Postal code for Delivery Availability" icon={<CartIcon string="#D75951" className="w-6 h-6" />} heading="Free Delivery"  />
 
           </div>
           {/*  */}
