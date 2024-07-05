@@ -1,4 +1,3 @@
-import * as React from "react";
 import { SVGProps } from "react";
 
 const CartIcon = ({ stroke = "#D75951", ...props }: SVGProps<SVGSVGElement> & { stroke?: string }) => (

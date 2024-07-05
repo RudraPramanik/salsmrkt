@@ -4,7 +4,7 @@ import { setColor, setSize } from "../redux/slices/ProductSlice";
 import { addItem } from "../redux/slices/CartSlice";
 import productData from "../utils/constant";
 import Gallery from "../components/product-page/ProductGallary";
-import CustomRadioButton from "../components/ui/SharedComponent/RadioButton";
+import CustomRadioButton from "../components/ui/SharedComponent/CustomRadioButton";
 import ColorSelectButton from "../components/ui/SharedComponent/ColorSelectButton";
 import QuantitySelector from "../components/ui/QuantitySelect";
 import ColoredButton from "../components/ui/SharedComponent/CButton";

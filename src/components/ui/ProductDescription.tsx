@@ -9,7 +9,7 @@ const ProductDescription = () => {
         <Text variant="heading2xl" color="black" fontWeight="bold">
           Polo Shirt
         </Text>
-        <Text variant="bodySm" color="gray" lineHeight="loose">
+        <Text variant="bodySm" color="chocolate" lineHeight="loose">
           Teixeira Design Studio
         </Text>
       </div>

@@ -4,7 +4,6 @@ import { removeItem, updateItemCount } from '../../redux/slices/CartSlice';
 import { CrossWhiteIcon } from '../icons/CrossIcon';
 import ColorSelectButton from '../ui/SharedComponent/ColorSelectButton';
 import Text from './SharedComponent/Text';
-import QuantitySelector from '../ui/QuantitySelect';
 import { RectDown, RectUp } from '../icons/Rect';
 
 interface CartItemProps {

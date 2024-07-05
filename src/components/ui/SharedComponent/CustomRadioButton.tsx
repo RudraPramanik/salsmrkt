@@ -30,9 +30,9 @@ const CustomRadioButton: React.FC<CustomRadioButtonProps> = ({
           "checked:bg-primary-blue checked:border-white checked:ring-2 checked:ring-offset-1 checked:ring-white"
         )}
       />
-      <Text variant="bodyXs"
+      <Text variant="bodyXs" color="chocolate"
         className={clsx(
-          " text-chocolate-text  ml-2 peer-checked:text-primary-blue"
+          "  ml-2 peer-checked:text-primary-blue"
         )}
       >
         {label}
