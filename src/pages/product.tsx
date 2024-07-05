@@ -112,7 +112,6 @@ const Product: React.FC = () => {
           <div className="flex space-x-4 py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray   " >
             {product.colors.map((color) => (
               <ColorSelectButton
-              borderColor={color.name}
                 key={color.name}
                 color={color.name}
                 checked={selectedColor === color.name}
@@ -125,8 +124,8 @@ const Product: React.FC = () => {
 
 
         {/* size */}
-          <div className="py-4 md:py-8 2xl:py-10 3xl:py-12 border-b border-primary-gray " >
-          <Text variant='bodyXs' className=" text-chocolate-text " >{selectedSize}</Text>
+          <div className="py-4 md:py-8 2xl:py-10 3xl:py-12 border-b space-y-4 border-primary-gray " >
+          <Text variant='bodyXs' color="chocolate" >choose a size:</Text>
 
           <div className="flex space-x-4" >
             {product.colors
@@ -164,55 +163,8 @@ const Product: React.FC = () => {
 
           </div>
           {/*  */}
-         
-          <div>
-            <p>Selected Size: {selectedSize}</p>
-            <p>
-              Price: $
-              {product.colors
-                .find((color) => color.name === selectedColor)
-                ?.sizes.find((size) => size.size === selectedSize)
-                ?.price.toFixed(2)}
-            </p>
-          </div>
-         
         </div>
-        {/* product */}
       </div>
-      <h1>{product.name}</h1>
-      <p>{product.description}</p>
-      {/* Color Buttons */}
-      {/*  */}
-      {/* <div>
-        {product.colors
-          .find((color) => color.name === selectedColor)
-          ?.sizes.map((size) => (
-            <CustomRadioButton
-              key={size.size}
-              checked={selectedSize === size.size}
-              onChange={() => handleSizeChange(size.size)}
-              label={size.size}
-            />
-          ))}
-      </div> */}
-      {/* Quantity Selector */}
-      {/* <QuantitySelector
-        quantity={quantity}
-        onIncrease={handleIncreaseQuantity}
-        onDecrease={handleDecreaseQuantity}
-      /> */}
-      {/* Display selected size and price */}
-      {/* <div>
-        <p>Selected Size: {selectedSize}</p>
-        <p>
-          Price: $
-          {product.colors
-            .find((color) => color.name === selectedColor)
-            ?.sizes.find((size) => size.size === selectedSize)
-            ?.price.toFixed(2)}
-        </p>
-      </div> */}
-      {/* Add to Cart Button */}
       <ProductOutline/>
     </div>
   );

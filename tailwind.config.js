@@ -36,6 +36,7 @@ export default {
           black: "#1D364D",
         },
         secondary: {
+          red:"#D75951",
           light: "#fbb6ce",
           DEFAULT: "#f687b3",
           dark: "#e53e3e",
